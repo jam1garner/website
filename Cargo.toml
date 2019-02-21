@@ -6,3 +6,8 @@ edition = "2018"
 
 [dependencies]
 rocket = "0.4"
+
+[dependencies.rocket_contrib]
+version = "*"
+default-features = false
+features = ["json", "handlebars_templates"]
