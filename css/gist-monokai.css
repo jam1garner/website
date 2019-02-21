@@ -1,0 +1,60 @@
+/* Background color */
+.gist-data tbody { background-color: #1c1c1c; }
+
+/* Line Numbers */
+.gist-data tbody td:nth-of-type(1) {
+  color: #5a5a5a !important;
+  background-color: #1d1d1d;
+}
+
+/* Code */
+.gist-data tbody td:nth-of-type(2){
+  color: #f8f8f2 !important;
+}
+
+/* Comments */
+.pl-c
+{
+  color: #75715e !important;
+}
+
+/* Function */
+.pl-k, tbody tr:first-child .blob-code, tbody tr:last-child .blob-code
+{
+  color: #ff005f !important;
+}
+
+/* Function Name */
+.pl-en
+{
+  color: #66d9ef !important;
+}
+
+/* Function Method (Numbers?) */
+.pl-c1
+{
+  color: #ae81ff !important;
+}
+/* "'s around Strings */
+.pl-pds
+{
+  color: #e6db74 !important;
+}
+
+/* Strings */
+.pl-s
+{
+  color: #e6db74 !important;
+}
+
+/* Identifiers */
+.pl-smi
+{
+    color: white !important;    
+}
+
+/* Bottom bar of gist */
+.gist-meta
+{
+    display: none !important;
+}
