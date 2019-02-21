@@ -3,7 +3,10 @@
 #[macro_use] extern crate rocket;
 #[macro_use] extern crate rocket_contrib;
 
+use rocket::response::NamedFile;
 use rocket_contrib::templates::Template;
+
+use std::path::{Path, PathBuf};
 
 #[get("/")]
 fn index() -> Template {
@@ -21,11 +24,17 @@ json![{
         }
     ],
     "test" : "3"
-}]
-)}
+}])}
+
+#[get("/<file..>")]
+fn css(file: PathBuf) -> Option<NamedFile> {
+    NamedFile::open(Path::new("css/").join(file)).ok()
+}
 
 fn main() {
     rocket::ignite()
         .attach(Template::fairing())
-        .mount("/", routes![index]).launch();
+        .mount("/", routes![index])
+        .mount("/css", routes![css])
+        .launch();
 }
