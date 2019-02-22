@@ -33,7 +33,6 @@ fn css(file: PathBuf) -> Option<NamedFile> {
 
 #[get("/<file>")]
 fn blog_post(file: String) -> Option<Template> {
-    println!("{}", file);
     Some(Template::render("post", blog_data::get_post_data(&file[..])?))
 }
 

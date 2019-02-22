@@ -5,8 +5,10 @@ use std::fs;
 
 fn post_to_html<P: AsRef<Path>>(path: P) -> String {
     let contents = fs::read_to_string(path)
-        .expect("Something went wrong reading the file");
-    markdown_to_html(&contents[..], &ComrakOptions::default())
+        .expect("Unable to read from file");
+    let mut options = ComrakOptions::default();
+    options.unsafe_ = true;
+    markdown_to_html(&contents[..], &options)
 }
 
 pub fn get_post_data(post_name: &str) -> Option<JsonValue> {
