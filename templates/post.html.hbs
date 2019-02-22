@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    {{#if post}}
+        <div class="post-top">
+            <h1>{{post.title}}</h1>
+        </div>
+        <div>{{{post.body}}}</div>
+    {{else}}
+        <p class="no-post">Post data not present found</p>
+    {{/if}}
+    <h1></h1>
+</body>
+</html>
