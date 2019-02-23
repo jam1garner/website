@@ -1,6 +1,8 @@
 #![feature(proc_macro_hygiene, decl_macro)]
 #[macro_use] extern crate rocket;
 #[macro_use] extern crate rocket_contrib;
+#[macro_use] extern crate lazy_static;
+extern crate regex;
 mod blog_data;
 
 use rocket::response::NamedFile;
@@ -10,21 +12,8 @@ use std::path::{Path, PathBuf};
 
 #[get("/")]
 fn index() -> Template {
-    Template::render("index", 
-
-json![{
-    "posts" : [
-        {
-            "title": "test",
-            "date": "01-01-2018"
-        },
-        {
-            "title": "test 2",
-            "date": "02-03-2019"
-        }
-    ],
-    "test" : "3"
-}])}
+    Template::render("index", blog_data::get_posts())
+}
 
 #[get("/<file..>")]
 fn css(file: PathBuf) -> Option<NamedFile> {
@@ -33,7 +22,7 @@ fn css(file: PathBuf) -> Option<NamedFile> {
 
 #[get("/<file>")]
 fn blog_post(file: String) -> Option<Template> {
-    Some(Template::render("post", blog_data::get_post_data(&file[..])?))
+    Some(Template::render("post", blog_data::get_post(&file[..])?))
 }
 
 #[get("/raw/<file>")]
