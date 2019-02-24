@@ -6,6 +6,13 @@
     <link rel="stylesheet" href="/css/gist-monokai.css" media="all">
     <link rel="stylesheet" href="/css/post.css" media="all">
     <link rel="stylesheet" href="/css/global.css" media="all">
+    {{#if post}}
+        <meta property="og:title" content="{{post.title}}" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="jam1garner" />
+        <meta property="og:image" content="{{post.thumbnail}}" />
+        <meta property="og:description"content="Blog post from {{post.date}}">
+    {{/if}}
 </head>
 <body>
     {{#if post}}
