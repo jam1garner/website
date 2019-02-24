@@ -1,17 +1,19 @@
 <html>
 <head> 
     <link rel="stylesheet" href="/css/global.css" media="all">
-<style>
-    .codeBlock {
-        width: 50%;
-    }
-</style>
+    <link rel="stylesheet" href="/css/index.css" media="all">
 </head>
 
 <body>
-    <h1>Posts</h1>
-    {{#each posts}}
-        <li><a href="/blog/{{name}}">{{title}} | Time posted: {{date}}</a></li>
-    {{/each}}
+    <article>
+        <h1 class="title">Posts</h1>
+        {{#each posts}}
+            <a class="post-card" href="/blog/{{name}}">
+                <h2 class="card-title">{{title}}</h2>
+                <img class="post-image" src="{{thumbnail}}" alt="">
+                <div class="post-date">Posted: {{date}}</div>
+            </a>
+        {{/each}}
+    </article>
 </body>
 </html>
