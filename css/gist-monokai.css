@@ -44,3 +44,19 @@
 {
     display: none !important;
 }
+
+/* Borders/Padding */
+.gist-file, .gist-data
+{
+    border: 0px !important;
+    background: #1c1c1c !important;
+}
+
+.gist .blob-wrapper {
+    padding: 10px 0px !important;
+    background: #1c1c1c !important;
+}
+
+.blob-wrapper::-webkit-scrollbar {
+    width: 0 !important;
+}
