@@ -1,5 +1,6 @@
 use rocket_contrib::json::JsonValue;
 use comrak::{markdown_to_html, ComrakOptions};
+use chrono::prelude::*;
 use std::path::{Path};
 use std::fs;
 use regex::Regex;
@@ -14,11 +15,11 @@ fn post_to_html<P: AsRef<Path>>(path: P) -> String {
 
 fn extract_first_image(markdown: &str) -> Option<String> {
     lazy_static! {
-        static ref image_regex: Regex = Regex::new(r"!\[\]\(([^\^\n)]+)\)").unwrap();
+        static ref IMAGE_REGEX: Regex = Regex::new(r"!\[\]\(([^\^\n)]+)\)").unwrap();
     }
     // Return $0 from ![]($0), returns None if not found
     Some(
-        image_regex.captures(markdown)?
+        IMAGE_REGEX.captures(markdown)?
         .get(1)?
         .as_str()
         .to_string()
@@ -27,27 +28,27 @@ fn extract_first_image(markdown: &str) -> Option<String> {
 
 fn extract_post_title(markdown: &str) -> Option<String> {
     lazy_static! {
-        static ref title_regex: Regex = Regex::new(r"(?m)^ *#(.+)").unwrap();
+        static ref TITLE_REGEX: Regex = Regex::new(r"(?m)^ *#(.+)").unwrap();
     }
     // Return the first #-level title, returns None if not found
     Some(
-        title_regex.captures(markdown)?
+        TITLE_REGEX.captures(markdown)?
         .get(1)?
         .as_str()
         .to_string()
     )
 }
 
-fn extract_post_timestamp(markdown: &str) -> Option<u64> {
+fn extract_post_timestamp(markdown: &str) -> Option<i64> {
     lazy_static! {
-        static ref title_regex: Regex = Regex::new(r"<!-- *timestamp: *(\d+) *-->").unwrap();
+        static ref TIMESTAMP_REGEX: Regex = Regex::new(r"<!-- *timestamp: *(\d+) *-->").unwrap();
     }
     // Return the first num from html comment in format timestamp:[num], returns None if not found
     Some(
-        title_regex.captures(markdown)?
+        TIMESTAMP_REGEX.captures(markdown)?
         .get(1)?
         .as_str()
-        .parse::<u64>()
+        .parse::<i64>()
         .ok()?
     )
 }
@@ -57,21 +58,28 @@ fn post_to_simple_json<P: AsRef<Path>>(path: P) -> Option<JsonValue> {
         .expect("Unable to read from file");
     let image_url = extract_first_image(&contents[..]).unwrap_or_default();
     let title = extract_post_title(&contents[..])?;
-    let timestamp = extract_post_timestamp(&contents[..]);
-    Some(json![{}])
+    let timestamp = extract_post_timestamp(&contents[..]).unwrap_or_default();
+
+    Some(json![{
+        "title": title,
+        "thumbnail": image_url,
+        "date": Utc.timestamp(timestamp, 0).format("%d %B %Y").to_string(),
+        "timestamp": timestamp
+    }])
 }
 
 pub fn get_post(post_name: &str) -> Option<JsonValue> {
     let post_path = format!("posts/{}.md", post_name);
     let path = Path::new(&post_path[..]);
     if path.is_file() {
+        let post_data = post_to_simple_json(path)?;
         Some(json![{
-            "post" : {
-                "name": "test",
-                "date": 0,
-                "body": post_to_html(path)
-            }
-        }])
+             "title": post_data.get("title"),
+             "thumbnail": post_data.get("thumbnail"),
+             "date": post_data.get("date"),
+             "timestamp": post_data.get("timestamp"),
+             "body": post_to_html(path)
+        })
     }
     else {
         None
@@ -79,12 +87,17 @@ pub fn get_post(post_name: &str) -> Option<JsonValue> {
 }
 
 pub fn get_posts() -> Option<JsonValue> {
-    Some(json![
-        fs::read_dir("posts").ok()?
+    let mut posts = 
+            fs::read_dir("posts").ok()?
             .filter_map(|entry| Some(entry.ok()?.path()))
-            .filter(|path| path.is_file() && path.extension().unwrap_or_default() == ".md")
+            .filter(|path| path.is_file() && path.extension().unwrap_or_default() == "md")
             .filter_map(|path| post_to_simple_json(path))
-            .collect::<Vec<JsonValue>>() 
-    ])
+            .collect::<Vec<JsonValue>>();
+
+    posts.sort_by_key(|j| j["timestamp"].as_i64());
+    posts.reverse();
+    Some(json![{
+        "posts": posts
+    }])
 }
 

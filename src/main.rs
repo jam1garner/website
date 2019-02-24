@@ -7,12 +7,18 @@ mod blog_data;
 
 use rocket::response::NamedFile;
 use rocket_contrib::templates::Template;
+use rocket_contrib::json::JsonValue;
 
 use std::path::{Path, PathBuf};
 
 #[get("/")]
 fn index() -> Template {
     Template::render("index", blog_data::get_posts())
+}
+
+#[get("/posts")]
+fn posts() -> Option<JsonValue> {
+    blog_data::get_posts()
 }
 
 #[get("/<file..>")]
@@ -33,7 +39,7 @@ fn blog_post_raw(file: String) -> Option<NamedFile> {
 fn main() {
     rocket::ignite()
         .attach(Template::fairing())
-        .mount("/", routes![index])
+        .mount("/", routes![index, posts])
         .mount("/css", routes![css])
         .mount("/blog/", routes![blog_post, blog_post_raw])
         .launch();
