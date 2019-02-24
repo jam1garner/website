@@ -2,7 +2,7 @@
 
 # Making a Decompiler from Nothing — A Postmortem
 
-
+![](https://cdn-images-1.medium.com/max/800/1*-F3wVC4J223xqGBRyztERw.png)
 
 I have recently had the not-so-common challenge of working with a completely undocumented interpreter. With this opportunity I got to research and develop tools for it from scratch and with that comes some interesting challenges. Originally I started with an assembler and disassembler, but convincing people who are barely familiar with code (if at all) to reverse engineer and edit thousands of unlabeled files written in an assembly language made up by a hobbyist reverse engineer is… a hard sell to say the least. So the logical next step is to abstract it, the best choice of which being decompilation to an existing language. Using an existing language makes teaching easier as those familiar with it already understand the syntax and those who aren’t familiar with it have resources to learn from.
 

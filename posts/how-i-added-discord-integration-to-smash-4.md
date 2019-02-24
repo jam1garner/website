@@ -32,7 +32,7 @@ If these weren’t the case it would likely require an inline code edit (basical
 
 So now that I know where to get my information from memory, I need a server to run on the Wii U to allow me to grab these values. Originally I was planning on using a simple server that just waits to be polled, then returns the byte at the address however I ended up deciding against it as a more complex, existing program “TCPGecko” already was able to grab memory asynchronously from the game over TCP. So, since that already exists I now just needed to make a client to grab/handle this information from TCPGecko and I needed to setup some stuff for Discord integration to work. The =TCPGecko connection was rather simple as I gutted [TCPGecko dNET by Chadderz](https://github.com/Chadderz121/tcp-gecko-dotnet) in order to use it’s TCPGecko library as it’s not packaged separately as far as I am aware. That covers a good majority of the TCPGecko work, the only other thing I need is this snippet of code to grab the key values:
 
-<iframe src="https://medium.com/media/5dce63be6129720f5e93dff156e0341d" frameborder=0></iframe>
+<script src="https://gist.github.com/jam1garner/562ff31cfca035d44d1c80957807ef50.js"></script>
 
 Last thing I needed to do was set up the Discord integration portion. First up I created a new app for it under the discord development portal and grabbed the application id, which is basically just given to discord for identification. It lets it know what to call the game and what resources are available to it.
 
@@ -44,7 +44,7 @@ Another action that needed to be taken on the developer portal was to add any an
 
 Problem is, they are at a resolution of 256x256 px rather than the 512x512 minimum discord requires. Frankly they look good enough that I didn’t mind having some below quality average so I just decided to upscale, sorry to anyone who would rather see me stick to the best practices. For this I just wrote a simple python script using pillow and glob to just upscale all PNGs in the folder.
 
-<iframe src="https://medium.com/media/66146670189ddff06769fa3bc58199d7" frameborder=0></iframe>
+<script src="https://gist.github.com/jam1garner/d7436fc299db3607a36f2652b2af4f16.js"></script>
 
 Now for probably the worst part of all of this, uploading all the images to the discord developer portal and naming them. This was basically a process of click a button, navigate to the file, upload it, name it the internal name of smash (as that allow me to just name it what the image was called basically) and wait a few seconds after hitting upload. Wish I knew a faster way, wish the UX for uploading was better, but whatever now that I’ve uploaded over 50 images it’s too late for that. I don’t *like *discord’s image upload system for this especially compared with the rest of their great UI/UX designs, but I also understand it’s a bit ridiculous to sink too much time into the UX for a developer feature that maybe a couple hundred people will ever see.
 

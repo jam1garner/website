@@ -8,7 +8,7 @@ While none of the information presented here requires you’ve read the first pa
 
 With just about just about anything reverse engineering related, the hardest part to figure out is how you initially start gaining an understanding. There isn’t really a trick to it, you just have to look for a way in. Sometimes you have nothing to go on and you just have to try a theory until it doesn’t work out. For bytecode you have to remember that, like in any bytecode/assembly language there will be patterns because code has patterns. Something you can, to a reasonable degree, guess and get it right. In this case we actually know there is a good chance it is variable size, as the script offsets don’t have any alignment pattern (for example in powerpc bytecode you know that each instruction will be at an offset divisible by 4 since each instruction is 32 bits wide.) Now for looking at patterns in the bytecode; If we look at some python code without understanding what it does at all
 
-<iframe src="https://medium.com/media/ab49719871696d717b7b3ce549fa8f97" frameborder=0></iframe>
+<script src="https://gist.github.com/jam1garner/f77dbebfc93a99018b8abfc406befb81.js"></script>
 
 Some things we can immediately notice, ignoring words and names and whatever, which we wouldn’t have with a bytecode, are things like everything separated by 2 newlines (a blank line) begins with a def and ends with an unindent. It’s quite similar in the technique I used for figuring out how to translate the scripting data over. So, let’s check the start of every script offset. If we highlight all of the first byte from each script offset, we get something that looks like this:
 
@@ -24,7 +24,7 @@ So there are a couple things worth noting here. First of all, as I sure hope you
 
 This is why I believe it’s two shorts rather than a full int or four individual bytes or even separate commands. As for 03, not only does it make sense for the command added after begin being end but it makes sense for end to have no additional parameters. Think of it like C code:
 
-<iframe src="https://medium.com/media/226471bf28092afee181c3bbcf39e240" frameborder=0></iframe>
+<script src="https://gist.github.com/jam1garner/c40e001221e2a9becd083d25b82be412.js"></script>
 
 We have
 

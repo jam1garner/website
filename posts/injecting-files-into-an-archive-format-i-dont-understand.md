@@ -2,7 +2,7 @@
 
 # Injecting Files into an Archive Format I Don’t Understand
 
-
+![](https://cdn-images-1.medium.com/max/800/1*T7TfUmcwFixUuRx-9CHp2g.png)
 
 Somewhat recently I was a part of the group reverse engineering files for smash ultimate, and one of the problems we encountered is that we were figuring out just about every file type faster than the 14 gigabyte archive they were contained. This creates an interesting scenario of a lot of code being written, but little to no testing done. Feeling antsy about wanting to try some modifications on hardware, I decided to try to figure out a temporary solution to help us get by.
 
@@ -57,7 +57,8 @@ So we take the same number of bytes, use the same compression method on them and
 
 Now let’s look at how I did my first level data injection, shown in this tweet:
 
-<iframe src="https://medium.com/media/8b53cff82362ad2e56eb540fdfa3aefc" frameborder=0></iframe>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">First smash ultimate compressed archive mod and first stage mod afaik <a href="https://t.co/k1lx8QAkVM">https://t.co/k1lx8QAkVM</a><br><br>Thanks to <a href="https://twitter.com/Raytwo_ssb?ref_src=twsrc%5Etfw">@Raytwo_ssb</a> for testing and recording, luckily it only took one try 😎</p>&mdash; jam1garner (@jam1garner) <a href="https://twitter.com/jam1garner/status/1066826227527364608?ref_src=twsrc%5Etfw">November 25, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 The mod itself is changing three floats (decimal values) in the file. One float of the y coordinate of a point in the collision, one float of the lower y bound of the camera box, and one float of the lower y bound of the death boundary.
 
@@ -74,7 +75,8 @@ So, generally speaking, more precision in our floats means it’s more random, a
 
 Injecting a texture, which I eventually did, (see tweet below) turned out to be much more of a challenge.
 
-<iframe src="https://medium.com/media/6b278fc4bd2f4f64ed239ac798aec83b" frameborder=0></iframe>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Here&#39;s the first (afaik) texture edit in smash ultimate, texture edit by <a href="https://twitter.com/KillzXGaming?ref_src=twsrc%5Etfw">@KillzXGaming</a>, injected into the game by me <a href="https://t.co/58t0o59dhb">pic.twitter.com/58t0o59dhb</a></p>&mdash; jam1garner (@jam1garner) <a href="https://twitter.com/jam1garner/status/1068255268293746695?ref_src=twsrc%5Etfw">November 29, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 With textures, there’s not only a lot more data that isn’t free for us to tweak, but due to a lot of repeated use of the same color (and therefore the same bytes), it compresses a lot more. And since we have to modify a lot more than 12 bytes to make a meaningful texture edit, it means we won’t be starting from a point that is close to the original compressed file size. Even after adjusting the compression level, the closest I could get was still over a KB away, and at compression level 1 (the worst case scenario for this technique) no less! This meant I would have to find a large area to have control of without messing up how the texture looks. In the end I ended up settling on the smallest “mip map” or texture level of detail.
 

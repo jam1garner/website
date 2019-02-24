@@ -1,14 +1,14 @@
 <!--timestamp:1521000000-->
+<!--![](https://miro.medium.com/max/782/1*uhDB-QPDEO-_Tl-Fs0IVvQ.png)-->
 
 # How I turned my DK Bongos Into a Keyboard
-
-
 
 AS YOU MAY ALREADY KNOW THE DK BONGOS ARE A SPECIAL GAMECUBE CONTROLLER MADE FOR “DONKEY KONGA 1/2” AND “DK JUNGLE BEAT”.
 
 If you’re wondering why I wrote that in all caps it’s because I wrote it using my DK Bongos and I currently don’t support lowercase. If you’re wondering why I spent 30 minutes typing a sentence using bongos it’s because that’s likely the level of masochism you were looking for from me when you decided to spend a couple minutes of your life reading about using Nintendo’s bongo themed controller as a keyboard. So, if you happen to follow me on twitter, you probably have already seen my musical keyboard and this x3 speed 30 second clip of me typing using it:
 
-<iframe src="https://medium.com/media/01fe4b3861f08785466671d05516ea7e" frameborder=0></iframe>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="tl" dir="ltr">DK Bongo typing in action. <a href="https://t.co/0wxlE4Abuw">pic.twitter.com/0wxlE4Abuw</a></p>&mdash; jam1garner (@jam1garner) <a href="https://twitter.com/jam1garner/status/973667327861456897?ref_src=twsrc%5Etfw">March 13, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 And, since this is my latest “dumb but cool stuff I spent 24 hours straight writing” project I figured it deserved a blog post, especially since I feel I learned a decent bit worth sharing. Here’s a basic rundown of how it works from a higher level:
 
@@ -26,7 +26,7 @@ The Mayflash gamecube adapter has a “PC” mode which, instead of using the co
 
 Message parsing is somewhat tricky, especially since I wasn’t familiar with it in anyway before now, so I just had it print the message to console while I pressed buttons in order to figure it out. Some example messages for when I clap with no buttons held look like:
 
-<iframe src="https://medium.com/media/bf87d39eb6f7e6bc26a4856ea8025c1c" frameborder=0></iframe>
+<script src="https://gist.github.com/jam1garner/007774eb252c0951c7aecf96531ba4f6.js"></script>
 
 So some notable features:
 
@@ -60,7 +60,7 @@ And if I hold both the top left and bottom left it will look like:
 
 After parsing the inputs, I compare them to the last frame to see if this is the first frame a button is pressed, as I don’t want holding a button (or heaven forbid, pressing a button for more than one time polled!) to do the input multiple times. If you disagree with taking away the ability to hold down a button to do things multiple times, feel free to shoot me a tweet showing a beat you make my just holding down the bongos, I’m not some heathen that’d make a inaccurate bongo keyboard so please take your “smart design” elsewhere. Lastly I have logic for turning these inputs into keypresses, most of which isn’t very special. The keypress code is extremely simple:
 
-<iframe src="https://medium.com/media/57304cc4bf58fa810ecbf51c42af3e18" frameborder=0></iframe>
+<script src="https://gist.github.com/jam1garner/a5220690bbbbc0676e421f6896d5afed.js"></script>
 
 And the way I “cycle” through characters is essentially hit backspace and type the new character at the same time.
 
