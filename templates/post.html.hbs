@@ -2,17 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>{{post.title}}</title>
+    <link rel="stylesheet" href="/css/gist-monokai.css" media="all">
+    <link rel="stylesheet" href="/css/post.css" media="all">
+    <link rel="stylesheet" href="/css/global.css" media="all">
 </head>
 <body>
     {{#if post}}
         <div class="post-top">
-            <h1>{{post.title}}</h1>
         </div>
-        <div>{{{post.body}}}</div>
+        <article>{{{post.body}}}</article>
     {{else}}
-        <p class="no-post">Post data not present found</p>
+        <p class="no-post">Post data not found.</p>
     {{/if}}
-    <h1></h1>
 </body>
 </html>
