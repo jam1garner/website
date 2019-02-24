@@ -55,8 +55,10 @@
 .gist .blob-wrapper {
     padding: 10px 0px !important;
     background: #1c1c1c !important;
+    scrollbar-width: none;
 }
 
-.blob-wrapper::-webkit-scrollbar {
+.blob-wrapper::-webkit-scrollbar .blob-wrapper::scrollbar{
     width: 0 !important;
+    display: none !important;
 }
