@@ -1,6 +1,6 @@
 <html>
-<head>
-    <link rel="stylesheet" href="/css/gist-monokai.css" media="all">
+<head> 
+    <link rel="stylesheet" href="/css/global.css" media="all">
 <style>
     .codeBlock {
         width: 50%;
@@ -11,10 +11,7 @@
 <body>
     <h1>Posts</h1>
     {{#each posts}}
-        <li>{{title}} | Time posted: {{date}}</li>
+        <li><a href="/blog/{{name}}">{{title}} | Time posted: {{date}}</a></li>
     {{/each}}
-    <div class="codeBlock">
-        <script src="https://gist.github.com/jam1garner/ae7ddcf5140e13395820716b014495ee.js"></script></script>
-    </div>
 </body>
 </html>

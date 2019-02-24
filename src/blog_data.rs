@@ -1,7 +1,7 @@
 use rocket_contrib::json::JsonValue;
 use comrak::{markdown_to_html, ComrakOptions};
 use chrono::prelude::*;
-use std::path::{Path};
+use std::path::Path;
 use std::fs;
 use regex::Regex;
 
@@ -53,7 +53,7 @@ fn extract_post_timestamp(markdown: &str) -> Option<i64> {
     )
 }
 
-fn post_to_simple_json<P: AsRef<Path>>(path: P) -> Option<JsonValue> {
+fn post_to_simple_json(path: &Path) -> Option<JsonValue> {
     let contents = fs::read_to_string(path)
         .expect("Unable to read from file");
     let image_url = extract_first_image(&contents[..]).unwrap_or_default();
@@ -61,6 +61,7 @@ fn post_to_simple_json<P: AsRef<Path>>(path: P) -> Option<JsonValue> {
     let timestamp = extract_post_timestamp(&contents[..]).unwrap_or_default();
 
     Some(json![{
+        "name": path.file_stem()?.to_str(),
         "title": title,
         "thumbnail": image_url,
         "date": Utc.timestamp(timestamp, 0).format("%d %B %Y").to_string(),
@@ -91,7 +92,7 @@ pub fn get_posts() -> Option<JsonValue> {
             fs::read_dir("posts").ok()?
             .filter_map(|entry| Some(entry.ok()?.path()))
             .filter(|path| path.is_file() && path.extension().unwrap_or_default() == "md")
-            .filter_map(|path| post_to_simple_json(path))
+            .filter_map(|path| post_to_simple_json(&path))
             .collect::<Vec<JsonValue>>();
 
     posts.sort_by_key(|j| j["timestamp"].as_i64());
