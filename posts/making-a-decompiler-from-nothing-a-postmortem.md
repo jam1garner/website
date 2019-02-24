@@ -1,3 +1,4 @@
+<!--timestamp:1539316800-->
 
 # Making a Decompiler from Nothing — A Postmortem
 

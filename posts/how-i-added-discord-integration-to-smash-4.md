@@ -1,3 +1,4 @@
+<!--timestamp:1519966800-->
 
 # How I added Discord Integration to Smash 4
 

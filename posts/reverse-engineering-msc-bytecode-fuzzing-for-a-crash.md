@@ -1,3 +1,4 @@
+<!--timestamp:1550379600-->
 
 # Reverse Engineering MSC Bytecode — Fuzzing for a Crash
 
