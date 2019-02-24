@@ -58,7 +58,7 @@
     scrollbar-width: none;
 }
 
-.blob-wrapper::-webkit-scrollbar .blob-wrapper::scrollbar{
+.blob-wrapper::-webkit-scrollbar{
     width: 0 !important;
     display: none !important;
 }

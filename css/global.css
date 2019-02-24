@@ -4,8 +4,12 @@ body {
     background: #2C2C2A;
 }
 
-li, a, code, h1, p, h2, h3, h4, h5 {
+li, a, h1, p, h2, h3, h4, h5 {
     font-family: 'Lato', sans-serif;
+    color: white;
+}
+
+code {
     color: white;
 }
 
