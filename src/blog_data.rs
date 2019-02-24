@@ -73,13 +73,13 @@ pub fn get_post(post_name: &str) -> Option<JsonValue> {
     let path = Path::new(&post_path[..]);
     if path.is_file() {
         let post_data = post_to_simple_json(path)?;
-        Some(json![{
+        Some(json![{ "post": {
              "title": post_data.get("title"),
              "thumbnail": post_data.get("thumbnail"),
              "date": post_data.get("date"),
              "timestamp": post_data.get("timestamp"),
              "body": post_to_html(path)
-        })
+        }})
     }
     else {
         None
