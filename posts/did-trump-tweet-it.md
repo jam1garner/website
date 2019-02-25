@@ -2,8 +2,6 @@
 
 # Training a KNN classification model to recognize Trump’s writing style
 
-Quick Disclaimer: None of the following article has anything to do with politics, my opinions on anyone involved, and none of it is meant as a statement against anyone. Recognizing patterns in a writing style is not in any way criticism, so just enjoy and maybe learn something? ¯\\\_(ツ)\_/¯
-
 All the way back in the far off past of 2016, I came across a wonderful analysis by data scientist David Robinson on Trump’s tweets. He was looking into the feasibility of the claim made by VFX specialist [Todd Vaziri](https://twitter.com/tvaziri) that every tweet on Donald Trump’s twitter account that was sent from an android was much more hyperbolic than those sent from other devices. If you haven’t read [Robinson’s post](http://varianceexplained.org/r/trump-tweets/) before I highly suggest you do (and if you enjoy it he also has [a followup](http://varianceexplained.org/r/trump-followup/) that is just as good). In case you still are choosing not to read that then (spoilers) he investigates quite thoroughly and finds the claim to be quite accurate.
 
 ![](https://cdn-images-1.medium.com/max/2256/1*oIRnGxotdPGOYIScf6T0Jw.png)
