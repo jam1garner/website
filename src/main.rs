@@ -24,6 +24,11 @@ fn posts() -> Option<JsonValue> {
 }
 
 #[get("/<file..>")]
+fn img(file: PathBuf) -> Option<NamedFile> {
+    NamedFile::open(Path::new("img/").join(file)).ok()
+}
+
+#[get("/<file..>")]
 fn css(file: PathBuf) -> Option<NamedFile> {
     NamedFile::open(Path::new("css/").join(file)).ok()
 }
@@ -44,6 +49,7 @@ fn main() {
         .attach(Template::fairing())
         .mount("/", routes![index, posts])
         .mount("/css", routes![css])
+        .mount("/img", routes![img])
         .mount("/blog/", routes![blog_post, blog_post_raw])
         .mount("/rss", routes![feed::rss_feed])
         .launch();

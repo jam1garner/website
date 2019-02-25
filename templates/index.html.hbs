@@ -2,14 +2,27 @@
 <head> 
     <link rel="stylesheet" href="/css/global.css" media="all">
     <link rel="stylesheet" href="/css/index.css" media="all">
+    <link rel="stylesheet" href="/css/sticky_sidebar.css" media="all">
     <meta property="og:title" content="Blog Home" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="jam1garner" />
     <meta property="og:description"content="Writeups, Hacking, and Hacky Software">
 </head>
 <body>
-    <article>
+    <div class="sticky">
+        <a href="/"><img src="/img/jam_transparent_side.png"></a>
+        <ul>
+            <li><a href="/"><g>blog</g>(posts: <bl>&amp;</bl>[BlogPost])</a></li>
+            <li><a href="/about"><g>about</g>(<bl>&amp;mut</bl> self)</a></li>
+            <li><a href="/rss"><g>rss_feed</g><r>&lt;</r>T:  Post<r>&gt;</r>(posts: <bl>&amp;</bl>Vec<r>&lt;</r>T<r>&gt;</r>)</a></li>
+            <li><a href="https://twitter.com/jam1garner"><r>extern crate</r> <bl>twitter</bl>;</a></li>
+            <li><a href="https://github.com/jam1garner"><r>extern crate</r> <bl>github</bl>;</a></li>
+        </ul>
+    </div>
+    <div class="top-bar">
         <h1 class="title">Posts</h1>
+    </div>
+    <article>
         {{#each posts}}
             <a class="post-card" href="/blog/{{name}}">
                 <h2 class="card-title">{{title}}</h2>

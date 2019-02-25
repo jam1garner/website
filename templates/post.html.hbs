@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>{{post.title}}</title>
     <link rel="stylesheet" href="/css/gist-monokai.css" media="all">
+    <link rel="stylesheet" href="/css/sticky_sidebar.css" media="all">
     <link rel="stylesheet" href="/css/post.css" media="all">
     <link rel="stylesheet" href="/css/global.css" media="all">
     {{#if post}}
@@ -15,9 +16,17 @@
     {{/if}}
 </head>
 <body>
+    <div class="sticky">
+        <a href="/"><img src="/img/jam_transparent_side.png"></a>
+        <ul>
+            <li><a href="/"><g>blog</g>(posts: <bl>&amp;</bl>[BlogPost])</a></li>
+            <li><a href="/about"><g>about</g>(<bl>&amp;mut</bl> self)</a></li>
+            <li><a href="/rss"><g>rss_feed</g><r>&lt;</r>T:  Post<r>&gt;</r>(posts: <bl>&amp;</bl>Vec<r>&lt;</r>T<r>&gt;</r>)</a></li>
+            <li><a href="https://twitter.com/jam1garner"><r>extern crate</r> <bl>twitter</bl>;</a></li>
+            <li><a href="https://github.com/jam1garner"><r>extern crate</r> <bl>github</bl>;</a></li>
+        </ul>
+    </div>
     {{#if post}}
-        <div class="post-top">
-        </div>
         <article>{{{post.body}}}</article>
     {{else}}
         <p class="no-post">Post data not found.</p>
