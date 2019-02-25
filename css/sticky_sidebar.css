@@ -107,9 +107,15 @@ bl {
     .sticky img, .sticky img:hover, .sticky img:active {
         margin: auto;
         display: block;
-        width: 20%;
+        width: 100%;
         max-width: 100px;
     }
+
+    /*.sticky .logo {
+        height: 78px;
+        width: 78px;
+        display: block;
+    }*/
 
     .sticky ul li a, .sticky ul {
         font-size: 2vh;

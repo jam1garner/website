@@ -1,0 +1,63 @@
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 2vh;
+}
+
+article .project:nth-child(2n+1){
+    direction: rtl;
+}
+
+.project {
+    margin: 1em 0em;
+}
+
+.project .individual h2 {
+    display: inline;
+    margin-bottom: 0.25em;
+}
+
+.project .individual p {
+    margin: 0.25em;
+}
+
+.project .github img {
+    height: 1.5em;
+    margin-left: 0.3em;
+}
+
+.project hr {
+    border-color: #777; 
+}
+
+.project-table {
+    display: table;
+}
+
+.project-table .text {
+    vertical-align: top;
+    display: table-cell;
+    direction: ltr;
+    width: 50%;
+    padding: 0.5em;
+}
+
+.project-table .image {
+    display: table-cell;
+    direction: ltr;
+    width: 50%;
+}
+
+.project-table .image img {
+    width: 100%;
+}
+
+.project .caption {
+    text-align: center;
+    margin: 0px;
+}
+
+.project .text .individual {
+    margin: 0 0 1em 0;
+}

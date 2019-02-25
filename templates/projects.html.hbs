@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Projects | jam1garner</title>
+    <link rel="stylesheet" href="/css/gist-monokai.css" media="all">
+    <link rel="stylesheet" href="/css/sticky_sidebar.css" media="all">
+    <link rel="stylesheet" href="/css/global.css" media="all">
+    <link rel="stylesheet" href="/css/projects.css" media="all">
+    {{#if post}}
+        <meta property="og:title" content="Projects" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="jam1garner" />
+        <meta property="og:description"content="All the things I've made over the past couple years">
+    {{/if}}
+</head>
+<body>
+    <div class="sticky">
+        <a class="logo" href="/"><img src="/img/jam_transparent_side.png" alt="logo"></a>
+        <ul>
+            <li><a href="/"><g>blog</g>(posts: <bl>&amp;</bl>[BlogPost])</a></li>
+            <li><a href="/projects"><g>get_projects</g>(<bl>&amp;mut</bl> self)</a></li>
+            <li><a href="/rss"><g>rss_feed</g><r>&lt;</r>T:  Post<r>&gt;</r>(posts: <bl>&amp;</bl>Vec<r>&lt;</r>T<r>&gt;</r>)</a></li>
+            <li><a href="https://twitter.com/jam1garner"><r>extern crate</r> <bl>twitter</bl>;</a></li>
+            <li><a href="https://github.com/jam1garner"><r>extern crate</r> <bl>github</bl>;</a></li>
+        </ul>
+    </div>
+    <article>
+        <h1>Projects</h1>
+        {{#each projects}}
+        <section class="project">
+            <div class="project-table">
+                <div class="text">
+                    {{#each projects}}
+                        <div class="individual">
+                            <h2>{{name}}</h2>
+                            <a class="github" href="{{github}}"><img src="/img/github_light.png" alt="Github"></a>
+                            <p>{{description}}</p>
+                        </div>
+                    {{/each}}
+                </div>
+                <div class="image">
+                    {{#if embed}}
+                        {{{embed}}}
+                    {{else}}
+                        {{#if image}}
+                            <img src="{{image}}" alt="">
+                        {{/if}}
+                    {{/if}}
+                    {{#if caption}}
+                        <p class="caption">{{caption}}</p>
+                    {{/if}}
+                </div>
+            </div>
+            <hr>
+        </section>
+        {{/each}}
+    </article>
+</body>
+</html>
+

@@ -4,7 +4,9 @@
 #[macro_use] extern crate lazy_static;
 extern crate regex;
 extern crate rss;
+extern crate serde_json;
 mod blog_data;
+mod project_data;
 mod feed;
 
 use rocket::response::NamedFile;
@@ -43,13 +45,17 @@ fn blog_post_raw(file: String) -> Option<NamedFile> {
     NamedFile::open(Path::new("posts/").join(file)).ok()
 }
 
+#[get("/projects")]
+fn projects() -> Option<Template> {
+    Some(Template::render("projects", project_data::get_projects()?))
+}
 
 fn main() {
      rocket::ignite()
         .attach(Template::fairing())
-        .mount("/", routes![index, posts])
-        .mount("/css", routes![css])
-        .mount("/img", routes![img])
+        .mount("/", routes![index, posts, projects])
+        .mount("/css/", routes![css])
+        .mount("/img/", routes![img])
         .mount("/blog/", routes![blog_post, blog_post_raw])
         .mount("/rss", routes![feed::rss_feed])
         .launch();

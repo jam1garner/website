@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400');
 
+article {
+    margin: auto;
+    max-width: 800px;
+}
+
 body {
     background: #2C2C2A;
 }
@@ -14,7 +19,7 @@ code {
 }
 
 p {
-    font-size: 18px;
+    font-size: 1.75vh;
     font-family: 'Lato', sans-serif;
     color: white;
 }

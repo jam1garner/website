@@ -1,0 +1,106 @@
+{ "projects" : [
+    {
+        "projects" : [
+            {
+                "name": "mscdec",
+                "date": "",
+                "github": "https://www.github.com/jam1garner/mscdec",
+                "description": "MotionScript to C decompiler written in python, with 100% accuracy on all files in Smash for Wii U."
+            },
+            {
+                "name": "msclang",
+                "date": "",
+                "github": "https://www.github.com/jam1garner/msclang",
+                "description": "C compiler for MotionScript written in python capable of recompiling mscdec output with (functionally) 100% accuracy."
+            },
+            {
+                "name": "pymsc",
+                "date": "",
+                "github": "https://www.github.com/jam1garner/pymsc",
+                "description": "Assembler, Disassembler, Emulator and Library for working with MotionScript, the bytecode of movesets in Smash for Wii U."
+            }
+        ],
+        "image": "https://pbs.twimg.com/media/Dsq6QbUWoAA16FF.jpg",
+        "caption": "Example output from mscdec (Captain Falcon)"
+    },
+    {
+        "projects" : [
+            {
+                "name": "ROBChain",
+                "date": "",
+                "github": "https://www.github.com/jam1garner/ROBChain",
+                "description": "Very Stable Proof of Concept Exploit for the MotionScript Virtual Machine in Smash for Wii U allowing for the loading of arbitrary ROP payloads of any size in a consistent and convenient manner."
+            }
+        ],
+        "embed": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube-nocookie.com/embed/u3qKsbGPgn0\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+        "caption": "Proof of Concept being used to display an arbitrary message."
+    },
+    { 
+
+        "projects" : [
+            {
+                "name": "Samsung WB35F Research",
+                "date": "",
+                "github": "https://github.com/jam1garner/wb35f-research",
+                "description": "Research into the Samsung WB35F Emulator with the end goal of developing an exploit for it. Includes firmware downloader/extractor, research notes, and a rudimentary emulator written in python with unicorn for dynamic analysis of the Zoran COACH firmware kernel."
+            }
+        ],
+        "image": "https://pbs.twimg.com/media/Dx7uRQ-VAAAMd2F.jpg",
+        "caption": "WB35F/COACH Emulator in action."
+    },
+    {
+        "projects" : [
+            {
+                "name": "Nail Hex Editor",
+                "date": "",
+                "github": "https://github.com/jam1garner/nail",
+                "description": "A vim-inspired hex editor for the terminal written in Rust."
+            }
+        ],
+        "image": "https://pbs.twimg.com/media/Dy1N6y1WsAEeNih.jpg"
+    },
+    {
+        "projects" : [
+            {
+                "name": "Smash Forge",
+                "date": "",
+                "github": "https://github.com/jam1garner/Smash-Forge",
+                "description": "Smash 4 File Editor, with minor support for other games including Melee, Pokken and many other Bandai Namco and Nintendo games. Supports over 20 filetypes to varying degrees allowing the modding of models, animations, bones, materials, collisions and parameter files."
+            }
+        ],
+        "image": "https://raw.githubusercontent.com/wiki/jam1garner/Smash-Forge/Images/Application%20Main.png"
+    },
+    {
+        "projects" : [
+            {
+                "name": "DK Konga Keyboard",
+                "date": "",
+                "github": "https://github.com/jam1garner/dk-bongo-keyboard",
+                "description": "Application-as-Driver written in C# for the Donkey Kong Bongo Gamecube Controller to allow for it to be used as a keyboard."
+            }
+        ],
+        "embed": "<blockquote class=\"twitter-tweet\" data-lang=\"en\"><p lang=\"tl\" dir=\"ltr\">DK Bongo typing in action. <a href=\"https://t.co/0wxlE4Abuw\">pic.twitter.com/0wxlE4Abuw</a></p>&mdash; jam1garner (@jam1garner) <a href=\"https://twitter.com/jam1garner/status/973667327861456897?ref_src=twsrc%5Etfw\">March 13, 2018</a></blockquote><script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>"
+    },
+    {
+        "projects" : [
+            {
+                "name": "Smash Disc4d",
+                "date": "",
+                "github": "",
+                "description": "A client for interfacing with a Wii U gecko server written in C# in order to add Discord Rich Presence to Smash 4, allowing you to show off what mode, stage, and characters you are playing with."
+            }
+        ],
+        "image": "https://cdn-images-1.medium.com/max/1600/1*ThRb74nQYMXEYmjGiiD9Qg.png"
+    },
+    {
+        "projects" : [
+            {
+                "name": "Chrome Bangs",
+                "date": "",
+                "github": "https://github.com/jam1garner/chrome-bangs",
+                "description": "Google Chrome Extension for adding DuckDuckGo Bangs to Google/Bing.\nhttps://chrome.google.com/webstore/detail/google-bangs/akdgagbbklfcfikcnjhkokgmghnmaikl?hl=en-US"
+            }
+        ],
+        "image": "https://lh3.googleusercontent.com/kP8viHSUjBlAzoA6Da0HO3hOFTACHdJqjCqHFIGKojrqy3GzQyd_hFWXOIJUHaW7654PrV2EtPA=w640-h400-e365"
+    }
+]}
