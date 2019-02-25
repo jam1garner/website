@@ -86,7 +86,7 @@
             {
                 "name": "Smash Disc4d",
                 "date": "",
-                "github": "",
+                "github": "https://github.com/jam1garner/smash-disc4d",
                 "description": "A client for interfacing with a Wii U gecko server written in C# in order to add Discord Rich Presence to Smash 4, allowing you to show off what mode, stage, and characters you are playing with."
             }
         ],
