@@ -10,6 +10,12 @@
     padding: 20px;
 }
 
+.sticky .logo {
+    height: 78px;
+    width: 78px;
+    display: block;
+}
+
 .sticky img {
     padding: 2px;
     margin: 4px;
@@ -33,6 +39,7 @@
 .sticky ul {
     position: relative;
     list-style: none;
+    margin-top: 20px;
     margin-left: 0;
     padding-left: 1.2em;
 }
@@ -103,7 +110,6 @@ bl {
         width: 20%;
         max-width: 100px;
     }
-
 
     .sticky ul li a, .sticky ul {
         font-size: 2vh;
