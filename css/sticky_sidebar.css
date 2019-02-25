@@ -93,12 +93,19 @@ bl {
     }
 
     .sticky {
-        width: 440px;
+        width: 90%;
         position: inherit;
     }
 
+    .sticky img, .sticky img:hover, .sticky img:active {
+        margin: auto;
+        display: block;
+        width: 20%;
+        max-width: 100px;
+    }
+
+
     .sticky ul li a, .sticky ul {
-        /*font-size: small;*/
+        font-size: 2vh;
     }
 }
-

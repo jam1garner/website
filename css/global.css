@@ -18,12 +18,3 @@ p {
     font-family: 'Lato', sans-serif;
     color: white;
 }
-
-@media only screen and (max-width: 1640px) {
-    article {
-        margin: 0px;
-        position: absolute;
-        top: 0px;
-        left: 440px;
-    }
-}
