@@ -54,12 +54,7 @@ Discord doesn’t really say they support C# but we can just use their Unity exa
 
 ![](https://cdn-images-1.medium.com/max/2752/1*ThRb74nQYMXEYmjGiiD9Qg.png)
 
-My Twitter:
-[**jam1garner (@jam1garner) | Twitter**
-*The latest Tweets from jam1garner (@jam1garner). Software Engineer, Console exploitation, Developer of Smash Forge and…*twitter.com](https://twitter.com/jam1garner)
-
 Github Repo:
-[**jam1garner/smash-disc4d**
-*smash-disc4d - Discord rich presence integration for Smash 4 Wii U*github.com](https://github.com/jam1garner/smash-disc4d)
+[*smash-disc4d - Discord rich presence integration for Smash 4 Wii U*](https://github.com/jam1garner/smash-disc4d)
 
-Download: [https://github.com/jam1garner/smash-disc4d](https://github.com/jam1garner/smash-disc4d)/releases
+Download: [https://github.com/jam1garner/smash-disc4d](https://github.com/jam1garner/smash-disc4d/releases)

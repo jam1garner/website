@@ -64,14 +64,10 @@ After parsing the inputs, I compare them to the last frame to see if this is the
 
 And the way I “cycle” through characters is essentially hit backspace and type the new character at the same time.
 
-Want more stuff like this? Check out my other posts or follow me on twitter:
-[**jam1garner (@jam1garner) | Twitter**
-*The latest Tweets from jam1garner (@jam1garner). Software Engineer, Console exploitation, Developer of Smash Forge and…*twitter.com](https://twitter.com/jam1garner)
-
 Want to try out the DK Bongo Keyboard yourself? (Note: requires Mayflash adapter and DK Bongo) Grab the latest release here:
-[**jam1garner/dk-bongo-keyboard**
-*dk-bongo-keyboard - Application for interfacing with DK Bongos over HID for use as a keyboard*github.com](https://github.com/jam1garner/dk-bongo-keyboard/releases)
+
+[dk-bongo-keyboard - Application for interfacing with DK Bongos over HID for use as a keyboard](https://github.com/jam1garner/dk-bongo-keyboard/releases)
 
 Want a more in depth look or instructions on how to use? Check out the github repository itself (Instructions in readme):
-[**jam1garner/dk-bongo-keyboard**
-*dk-bongo-keyboard - Application for interfacing with DK Bongos over HID for use as a keyboard*github.com](https://github.com/jam1garner/dk-bongo-keyboard)
+
+[https://github.com/jam1garner/dk-bongo-keyboard](https://github.com/jam1garner/dk-bongo-keyboard)
