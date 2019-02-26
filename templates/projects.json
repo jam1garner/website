@@ -102,5 +102,16 @@
             }
         ],
         "image": "https://lh3.googleusercontent.com/kP8viHSUjBlAzoA6Da0HO3hOFTACHdJqjCqHFIGKojrqy3GzQyd_hFWXOIJUHaW7654PrV2EtPA=w640-h400-e365"
+    },
+    {
+        "projects" : [
+            {
+                "name": "Blog",
+                "date": "",
+                "github": "https://github.com/jam1garner/blog",
+                "description": "My website/blog utilizes a Rust backend, a Handlebars templating system and uses Markdown for the posts themselves. Styling/Templates are handmade and the site is entirely javascript-less."
+            }
+        ],
+        "image" : "https://cdn.discordapp.com/attachments/376971848555954187/549746181299765264/unknown.png"
     }
 ]}
