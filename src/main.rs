@@ -10,6 +10,7 @@ mod project_data;
 mod feed;
 
 use rocket::response::NamedFile;
+use rocket::response::Redirect;
 use rocket_contrib::templates::Template;
 use rocket_contrib::json::JsonValue;
 
@@ -23,6 +24,16 @@ fn index() -> Template {
 #[get("/posts")]
 fn posts() -> Option<JsonValue> {
     blog_data::get_posts()
+}
+
+#[get("/blog")]
+fn blog() -> Redirect {
+    Redirect::to("/")
+}
+
+#[get("/projects")]
+fn projects() -> Option<Template> {
+    Some(Template::render("projects", project_data::get_projects()?))
 }
 
 #[get("/<file..>")]
@@ -45,15 +56,10 @@ fn blog_post_raw(file: String) -> Option<NamedFile> {
     NamedFile::open(Path::new("posts/").join(file)).ok()
 }
 
-#[get("/projects")]
-fn projects() -> Option<Template> {
-    Some(Template::render("projects", project_data::get_projects()?))
-}
-
 fn main() {
      rocket::ignite()
         .attach(Template::fairing())
-        .mount("/", routes![index, posts, projects])
+        .mount("/", routes![index, posts, blog, projects])
         .mount("/css/", routes![css])
         .mount("/img/", routes![img])
         .mount("/blog/", routes![blog_post, blog_post_raw])
