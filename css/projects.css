@@ -25,6 +25,7 @@ article .project:nth-child(2n+1){
 .project .github img {
     height: 1.5em;
     margin-left: 0.3em;
+    vertical-align: text-bottom;
 }
 
 .project hr {
