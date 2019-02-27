@@ -34,8 +34,10 @@
                 <div class="text">
                     {{#each projects}}
                         <div class="individual">
-                            <h2>{{name}}</h2>
-                            <a class="github" href="{{github}}"><img src="/img/github_light.png" alt="Github"></a>
+                            <a class="github" href="{{github}}">
+                                <h2>{{name}}</h2>
+                                <img src="/img/github_light.png" alt="Github">
+                            </a>
                             <p>{{description}}</p>
                         </div>
                     {{/each}}
