@@ -48,6 +48,11 @@ fn css(file: PathBuf) -> Option<NamedFile> {
     NamedFile::open(Path::new("css/").join(file)).ok()
 }
 
+#[get("/<file..>")]
+fn js(file: PathBuf) -> Option<NamedFile> {
+    NamedFile::open(Path::new("js/").join(file)).ok()
+}
+
 #[get("/<file>")]
 fn blog_post(file: String) -> Option<Template> {
     Some(Template::render("post", blog_data::get_post(&file[..])?))
@@ -84,6 +89,7 @@ fn main() {
         .attach(Template::fairing())
         .mount("/", routes![index, posts, blog, projects, compile, compiler_explorer])
         .mount("/css/", routes![css])
+        .mount("/js/", routes![js])
         .mount("/img/", routes![img])
         .mount("/blog/", routes![blog_post, blog_post_raw])
         .mount("/rss", routes![feed::rss_feed])

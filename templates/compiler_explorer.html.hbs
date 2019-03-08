@@ -1,0 +1,32 @@
+
+<html>
+<head>
+    <title>msclang Compiler Explorer | jam1garner</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/img/jam_transparent_side.png">
+    <link rel="stylesheet" href="/css/global.css" media="all">
+    <link rel="stylesheet" href="/css/compiler_explorer.css" media="all">
+    <link rel="stylesheet" href="/css/sticky_sidebar.css" media="all">
+    <script src="/js/compiler.js"></script>
+    <meta property="og:title" content="Compiler Explorer" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="jam1garner" />
+    <meta property="og:description"content="A compiler explorer for msclang">
+</head>
+<body>
+    {{> sticky}}
+    <div class="main">
+        <h1>msclang Compiler Explorer</h1>
+        <div class="bottom">
+            <div class="left">
+                <textarea id="c-code">{{program}}</textarea>
+                <button id="compile" onclick="compile()">Compile</button>
+            </div>
+            <div class="right">
+                <div class="disasm-table">
+                    <div class="line">test</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
