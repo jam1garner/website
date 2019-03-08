@@ -1,0 +1,3 @@
+[submodule "msclang_explorer"]
+	path = msclang_explorer
+	url = https://github.com/jam1garner/msclang_explorer.git
