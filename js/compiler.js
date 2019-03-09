@@ -145,6 +145,9 @@ function display_result(msc) {
 
 function compile() {
     var codeTextArea = document.getElementById('c-code');
+    // If you're reading this I'd like you to know this was not one of the
+    // first 30ish things I tried. Please understand. Think there's a bug here?
+    // just give up now. No point fixing it. Burn it all to the ground.
     var code = codeTextArea.innerHTML
                     .replace(/<div(?: [^>]*?)?><br><\/div>/g, "\n")
                     .replace(/<div(?: [^>]*?)?>((?:.|\n)*?)<\/div>/g, "$1\n")
