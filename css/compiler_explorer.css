@@ -4,12 +4,10 @@
     margin-top: 10px;
     margin-bottom: 10px;
 }
-
 h1 {
     overflow: hidden;
     text-align: center;
 }
-
 pre {
     box-sizing: border-box;
     width: 100%;
@@ -23,47 +21,38 @@ pre {
     color: #c5c5c5;
     padding: 15px;
 }
-
 pre, tr {
     font-family:Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New, monospace;
 }
-
 pre:hover, input:hover, pre:active, input:active, pre:focus, input:focus, label:focus, .btn:active, .btn.active
 {
     outline:0px !important;
     -webkit-appearance:none;
 }
-
 tbody, tr {
     display: block;
     color: #c5c5c5;
     background: #40403d;
 }
-
 table, td {
 }
-
 .bottom {
     display: table;
     height: 80%;
     width: 100%;
 }
-
 .left {
     display: table-cell;
     padding: 10px;
     height: 100%;
     width: 50%;
 }
-
 .left #compile {
     display: table-cell;
 }
-
 .left #c-code {
     display: block;
 }
-
 .right {
     margin-top: 0px;
     display: table-cell;
@@ -71,30 +60,24 @@ table, td {
     height: 100%;
     width: 100%;
 }
-
 .disasm-table {
     display: block;
     height: 100%;
     width: 100%;
 }
-
 .line {
     display: block;
     width: 100%;
 }
-
 td {
     padding: 0px 10px;
 }
-
 .highlight1 {
     color: #ff005f;
 }
-
 .highlight2 {
     color: #e6db74;
 }
-
 button {
     -webkit-appearance: none;
     -moz-appearance:none;
