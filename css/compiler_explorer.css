@@ -6,36 +6,41 @@
 }
 
 h1 {
+    overflow: hidden;
     text-align: center;
 }
 
-textarea {
+pre {
     box-sizing: border-box;
     width: 100%;
     height: 100%; 
     overflow-y: scroll;
     overflow-x: scroll;
-    white-space: nowrap;
+    white-space: pre-nowrap;
     overflow: auto;
     background: #40403d;
     border: none;
     color: #c5c5c5;
     padding: 15px;
+}
+
+pre, tr {
     font-family:Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New, monospace;
 }
 
-textarea:hover, 
-input:hover, 
-textarea:active, 
-input:active, 
-textarea:focus, 
-input:focus,
-label:focus,
-.btn:active,
-.btn.active
+pre:hover, input:hover, pre:active, input:active, pre:focus, input:focus, label:focus, .btn:active, .btn.active
 {
     outline:0px !important;
     -webkit-appearance:none;
+}
+
+tbody, tr {
+    display: block;
+    color: #c5c5c5;
+    background: #40403d;
+}
+
+table, td {
 }
 
 .bottom {
@@ -46,6 +51,7 @@ label:focus,
 
 .left {
     display: table-cell;
+    padding: 10px;
     height: 100%;
     width: 50%;
 }
@@ -55,22 +61,47 @@ label:focus,
 }
 
 .left #c-code {
-    display: table-cell;
+    display: block;
 }
 
 .right {
-    display: inline-block;
+    margin-top: 0px;
+    display: table-cell;
+    padding: 10px;
     height: 100%;
     width: 100%;
 }
 
 .disasm-table {
-    display: inherit;
+    display: block;
     height: 100%;
     width: 100%;
 }
 
 .line {
-    display: table-cell;
+    display: block;
     width: 100%;
+}
+
+td {
+    padding: 0px 10px;
+}
+
+.highlight1 {
+    color: #ff005f;
+}
+
+.highlight2 {
+    color: #e6db74;
+}
+
+button {
+    -webkit-appearance: none;
+    -moz-appearance:none;
+    appearance:none;
+    background: #1d1e22;
+    border-radius: 0px;
+    border: solid 1px;
+    color: #c5c5c5;
+    padding: 10px;
 }

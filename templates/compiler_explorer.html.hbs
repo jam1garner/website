@@ -18,14 +18,12 @@
         <h1>msclang Compiler Explorer</h1>
         <div class="bottom">
             <div class="left">
-                <textarea id="c-code">{{program}}</textarea>
+                <pre id="c-code" contentEditable="true">{{{program}}}</pre>
                 <button id="compile" onclick="compile()">Compile</button>
             </div>
-            <div class="right">
-                <div class="disasm-table">
-                    <div class="line">test</div>
-                </div>
-            </div>
+            <table class="right">
+                <tr><td>Not compiled yet. (Needs js)</td></tr>
+            </table>
         </div>
     </div>
 </body>
