@@ -21,7 +21,12 @@ pub fn compile(file: Data) -> Option<content::Json<Stream<ChildStdout>>> {
 pub fn get_default() -> Option<JsonValue> {
     Some(
         json![{
-            "program" : fs::read_to_string("templates/default.c").ok()?
+            "program" : 
+                fs::read_to_string("templates/default.c")
+                    .ok()?
+                    .split("\n")
+                    .map(|x| format!("<div>{}</div>", x).to_string())
+                    .collect::<String>()
         }]
     )
 }
