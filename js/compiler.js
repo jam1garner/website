@@ -148,8 +148,10 @@ function compile() {
     var code = codeTextArea.innerHTML
                     .replace(/<div(?: [^>]*?)?><br><\/div>/g, "\n")
                     .replace(/<div(?: [^>]*?)?>((?:.|\n)*?)<\/div>/g, "$1\n")
+                    .replace(/<span(?: [^>]*?)?>((?:.|\n)*?)<\/span>/g, "$1\n")
                     .replace(/&nbsp;/g, " ")
                     .replace(/\xa0/g, " ")
+                    .replace(/(?:<\/div>|<\/pre>)/g, "")
                     .replace(/<br>/g, "");
     console.log(code);
     var xhttp = new XMLHttpRequest();
