@@ -14,16 +14,25 @@ fn post_to_html<P: AsRef<Path>>(path: P) -> String {
     markdown_to_html(&contents[..], &options)
 }
 
+fn to_absolute_url(url: &str) -> String {
+    let mut absolute_url = String::new();
+    if !url.is_empty() && &url[0..1] == "/" {
+        absolute_url = String::from("https://jam1.re");
+    }
+    absolute_url + url
+}
+
 fn extract_first_image(markdown: &str) -> Option<String> {
     lazy_static! {
         static ref IMAGE_REGEX: Regex = Regex::new(r"!\[\]\(([^\^\n)]+)\)").unwrap();
     }
     // Return $0 from ![]($0), returns None if not found
     Some(
-        IMAGE_REGEX.captures(markdown)?
-        .get(1)?
-        .as_str()
-        .to_string()
+        to_absolute_url(
+            IMAGE_REGEX.captures(markdown)?
+            .get(1)?
+            .as_str()
+        )
     )
 }
 
