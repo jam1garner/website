@@ -10,6 +10,7 @@ fn post_to_html<P: AsRef<Path>>(path: P) -> String {
         .expect("Unable to read from file");
     let mut options = ComrakOptions::default();
     options.unsafe_ = true;
+    options.ext_strikethrough = true;
     markdown_to_html(&contents[..], &options)
 }
 
