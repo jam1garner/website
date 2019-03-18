@@ -53,9 +53,14 @@ fn js(file: PathBuf) -> Option<NamedFile> {
     NamedFile::open(Path::new("js/").join(file)).ok()
 }
 
+#[get("/unlisted/<file>")]
+fn private_blog_post(file: String) -> Option<Template> {
+    Some(Template::render("post", blog_data::get_post(&file[..], false)?))
+}
+
 #[get("/<file>")]
 fn blog_post(file: String) -> Option<Template> {
-    Some(Template::render("post", blog_data::get_post(&file[..])?))
+    Some(Template::render("post", blog_data::get_post(&file[..], true)?))
 }
 
 #[get("/raw/<file>")]
@@ -66,7 +71,7 @@ fn blog_post_raw(file: String) -> Option<NamedFile> {
 #[post("/compile", format="text/plain", data="<file>")]
 fn compile(file: Data) -> Option<content::Json<Stream<ChildStdout>>> {
     compiler::compile(file)
-} 
+}
 
 #[get("/compiler")]
 fn compiler_explorer() -> Option<Template> {
@@ -91,7 +96,7 @@ fn main() {
         .mount("/css/", routes![css])
         .mount("/js/", routes![js])
         .mount("/img/", routes![img])
-        .mount("/blog/", routes![blog_post, blog_post_raw])
+        .mount("/blog/", routes![blog_post, blog_post_raw, private_blog_post])
         .mount("/rss", routes![feed::rss_feed])
         .launch();
 }

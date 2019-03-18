@@ -79,8 +79,12 @@ fn post_to_simple_json(path: &Path) -> Option<JsonValue> {
     }])
 }
 
-pub fn get_post(post_name: &str) -> Option<JsonValue> {
-    let post_path = format!("posts/{}.md", post_name);
+pub fn get_post(post_name: &str, public: bool) -> Option<JsonValue> {
+    let post_path = if public {
+        format!("posts/{}.md", post_name)
+    } else {
+        format!("private/{}.md", post_name)
+    };
     let path = Path::new(&post_path[..]);
     if path.is_file() {
         let post_data = post_to_simple_json(path)?;
