@@ -23,3 +23,7 @@ p {
     font-family: 'Lato', sans-serif;
     color: white;
 }
+
+p, li {
+    line-height: 1.5;
+}
