@@ -44,7 +44,7 @@ function FileUpload(file) {
             document.getElementById("progress").innerText = "Failed, make sure your file is 64 kbps and a valid upload.";
         }
         if (this.readyState == 4 && this.status == 200) {
-            window.open(this.response);
+            window.location.assign(this.response);
             document.getElementById("progress").innerText = "Success";
         }
     };
@@ -73,5 +73,4 @@ function enableDragDrop() {
 window.onload = function() {
     enableDragDrop();
     document.getElementById('compile').onclick = compile;
-    compile();
 }
