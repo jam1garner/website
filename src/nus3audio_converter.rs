@@ -50,8 +50,12 @@ pub fn nus3audio_upload(name: String, file: Data) -> Option<String> {
     fs::create_dir_all(format!("/tmp/nus3audio/{}", id)).ok()?;
     file.stream_to_file(&path_with_ext).ok()?;
     let lopus_path = path.clone() + ".lopus";
-    vgaudio_convert(&path_with_ext, &lopus_path);
-    
+    if let Some(output) =
+    vgaudio_convert(&path_with_ext, &lopus_path)
+    {
+        println!("{}", std::str::from_utf8(&output.stdout[..]).ok()?);
+    }
+
     let mut nus3_file = Nus3audioFile::new();
     let mut lopus_data = vec![];
     
