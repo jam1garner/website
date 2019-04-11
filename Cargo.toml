@@ -14,6 +14,8 @@ lazy_static = "1.2"
 chrono = "0.4"
 rss = "1.0"
 serde_json = "*"
+nus3audio = "1.0.0"
+rand = "0.6.5"
 
 [dependencies.rocket_contrib]
 version = "*"

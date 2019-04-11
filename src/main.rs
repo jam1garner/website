@@ -2,13 +2,16 @@
 #[macro_use] extern crate rocket;
 #[macro_use] extern crate rocket_contrib;
 #[macro_use] extern crate lazy_static;
+extern crate nus3audio;
 extern crate regex;
 extern crate rss;
 extern crate serde_json;
+extern crate rand;
 mod blog_data;
 mod project_data;
 mod feed;
 mod compiler;
+mod nus3audio_converter;
 
 use rocket::response::{content, Redirect, Stream, NamedFile};
 use rocket::data::Data;
@@ -17,6 +20,8 @@ use rocket_contrib::json::JsonValue;
 
 use std::path::{Path, PathBuf};
 use std::process::ChildStdout;
+
+use nus3audio_converter::*;
 
 #[get("/")]
 fn index() -> Template {
@@ -87,12 +92,13 @@ fn compiler_explorer() -> Option<Template> {
                 )
         )
     )
-} 
+}
 
 fn main() {
      rocket::ignite()
         .attach(Template::fairing())
         .mount("/", routes![index, posts, blog, projects, compile, compiler_explorer])
+        .mount("/nus3audio", routes![nus3audio_converter, nus3audio_upload, nus3audio_download])
         .mount("/css/", routes![css])
         .mount("/js/", routes![js])
         .mount("/img/", routes![img])

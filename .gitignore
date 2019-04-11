@@ -1,4 +1,5 @@
 /target
 /private
+vgaudio/VGAudio*
 **/*.swp
 **/*.rs.bk
