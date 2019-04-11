@@ -12,7 +12,7 @@ use nus3audio::{Nus3audioFile, AudioFile};
 
 fn clean_tmp() -> bool {
     std::process::Command::new("find")
-        .args(&["/tmp/nus3audio", "-type", "f", "-amin", "+10", "-delete"])
+        .args(&["/tmp/nus3audio", "-amin", "+10", "-delete"])
         .output()
         .is_ok()
 }
@@ -50,9 +50,7 @@ pub fn nus3audio_upload(name: String, file: Data) -> Option<String> {
     fs::create_dir_all(format!("/tmp/nus3audio/{}", id)).ok()?;
     file.stream_to_file(&path_with_ext).ok()?;
     let lopus_path = path.clone() + ".lopus";
-    if let Some(output) = vgaudio_convert(&path_with_ext, &lopus_path) {
-        println!("{}", std::str::from_utf8(&output.stdout[..]).ok()?);
-    }
+    vgaudio_convert(&path_with_ext, &lopus_path);
     
     let mut nus3_file = Nus3audioFile::new();
     let mut lopus_data = vec![];
