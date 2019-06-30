@@ -1,0 +1,40 @@
+\documentclass{article}
+\nofiles
+\usepackage{geometry}
+\geometry{legalpaper, landscape, margin=2in}
+\pagenumbering{gobble}
+\usepackage{drawstack}
+% Use this instead if you don't want colors.
+% \usepackage[nocolor]{drawstack}
+\begin{document}
+
+\begin{table}[]
+\begin{tabular}{cccc}
+		 &
+		push. 3 &
+		push. 1 &
+		sub.
+		\\
+		\begin{drawstack}
+		  \cell{}
+		  \cell{}
+		  \cell{}
+		  \end{drawstack} &
+		\begin{drawstack}
+		  \cell{}
+		  \cell{}
+		  \cell{3}
+		\end{drawstack} &
+		\begin{drawstack}
+		  \cell{}
+		  \cell{1}
+		  \cell{3}
+		\end{drawstack} &
+		\begin{drawstack}
+		  \cell{}
+		  \cell{}
+		  \cell{2}
+		\end{drawstack}
+\end{tabular}
+\end{table}
+\end{document}
