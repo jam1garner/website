@@ -1,12 +1,13 @@
 h1.title {
     font-size: 48px;
     text-align: center;
+    margin: 10px;
 }
 
 .post-card {
     display: block;
     background: #343434;
-    border-radius: 10px;
+    /*border-radius: 10px;*/
     margin: 10px;
     padding: 0px;
     border: 1px solid #444;
@@ -14,7 +15,7 @@ h1.title {
 
 .post-card .card-title {
     margin: 0px;
-    border-radius: 10px 10px 0px 0px;
+    /*border-radius: 10px 10px 0px 0px;*/
     background: #444;
     padding: 15px;
 }
@@ -23,7 +24,7 @@ h1.title {
     margin: 0px;
     padding: 10px;
     color: #BBB;
-    border-radius: 0px 0px 10px 10px;
+    /*border-radius: 0px 0px 10px 10px;*/
     border: 1px solid #444;
 }
 
