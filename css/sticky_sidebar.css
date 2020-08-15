@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
 
 .sticky {
-    width: 440px;
+    width: 25%;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -48,6 +48,7 @@
     font-family: 'Roboto Mono', monospace;
     font-weight: bold;
     text-decoration: none !important;
+    font-size: 1.25vw;
 }
 
 .sticky ul li {
@@ -84,7 +85,7 @@ bl {
         margin: 0px;
         position: absolute;
         top: 0px;
-        left: 440px;
+        left: 30%;
     }
 }
 

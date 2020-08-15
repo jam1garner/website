@@ -2,7 +2,7 @@
 
 article {
     margin: auto;
-    max-width: 800px;
+    max-width: 60%;
 }
 
 body {
@@ -19,7 +19,6 @@ code {
 }
 
 p {
-    font-size: 1.75vh;
     font-family: 'Lato', sans-serif;
     color: white;
 }
