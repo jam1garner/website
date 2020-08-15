@@ -94,7 +94,7 @@ pub fn get_post(post_name: &str, public: bool) -> Option<JsonValue> {
              "date": post_data.get("date"),
              "timestamp": post_data.get("timestamp"),
              "body": post_to_html(path)
-        }})
+        }}])
     }
     else {
         None
