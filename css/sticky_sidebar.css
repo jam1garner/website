@@ -97,6 +97,10 @@ bl {
         position: inherit;
         max-width: 95%;
     }
+
+    article p {
+        font-size: 1.2em;
+    }
     
     article h1 {
         margin-top: 0px;
