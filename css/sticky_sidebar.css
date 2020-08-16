@@ -80,12 +80,13 @@ bl {
 }
 
 
-@media only screen and (max-width: 1640px) and (orientation: landscape) {
+@media only screen and /*(max-width: 1640px) and*/ (orientation: landscape) {
     article {
         margin: 0px;
         position: absolute;
         top: 0px;
         left: 30%;
+        max-width: 60%;
     }
 }
 
@@ -94,6 +95,7 @@ bl {
     article {
         margin: 0px auto;
         position: inherit;
+        max-width: 80%;
     }
     
     article h1 {

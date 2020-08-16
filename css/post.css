@@ -8,6 +8,7 @@ img, twitter-widget {
 h1 {
     font-size: 2.5em;
     font-weight: bold;
+    text-align: center;
 }
 
 code {
