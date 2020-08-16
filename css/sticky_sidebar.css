@@ -99,7 +99,19 @@ bl {
     }
 
     article p {
-        font-size: 1.2em;
+        font-size: 5vw;
+    }
+
+    article ol, article ul {
+        font-size: 5vw;
+    }
+
+    article pre {
+        font-size: 4vw;
+    }
+    
+    article h2 {
+        font-size: 6.5vw;
     }
     
     article h1 {
