@@ -7,10 +7,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   style="enable-background:new 0 0 144 144;"
-   viewBox="19 19 106 106"
-   height="144px"
-   width="144px"
+   viewBox="19 19 376.88889 376.88889"
+   height="512"
+   width="512"
    y="0px"
    x="0px"
    id="Layer_1"
@@ -44,15 +43,16 @@
      inkscape:window-height="1041"
      id="namedview38"
      showgrid="false"
-     inkscape:zoom="5.9583333"
-     inkscape:cx="43.384615"
-     inkscape:cy="72"
+     inkscape:zoom="0.74088853"
+     inkscape:cx="507.73109"
+     inkscape:cy="-67.337735"
      inkscape:window-x="0"
      inkscape:window-y="18"
      inkscape:window-maximized="0"
      inkscape:current-layer="Layer_1" />
   <g
-     id="g96">
+     id="g96"
+     transform="matrix(3.5680999,0,0,3.5680999,-50.755877,-48.82476)">
     <g
        id="g89"
        transform="translate(0.2464076,-9.2015302)">
