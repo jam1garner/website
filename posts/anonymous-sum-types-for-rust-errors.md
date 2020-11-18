@@ -153,4 +153,4 @@ You're free to use some-error in your projects, and I will certainly maintain it
 
 [My Twitter](https://twitter.com/jam1garner)
 
-[Reddit Discussion (todo)]()
+[Reddit Discussion](https://www.reddit.com/r/rust/comments/jwnsp4/anonymous_sum_types_for_rust_error_handling)
