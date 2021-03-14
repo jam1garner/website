@@ -24,6 +24,7 @@ pre code {
 }
 
 pre {
+    overflow-x: scroll;
     padding: 20px;
     white-space: pre-wrap;
     background: rgba(124, 124, 124, 25%);
