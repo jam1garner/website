@@ -90,7 +90,7 @@ Some closing thoughts in no particular order:
 
 ## <a name="installers"></a> Building Rust Windows Installers in CI
 
-Rust tooling tends to be nice in surprising ways, and Windows installers is no exception. [`cargo-wix`](https://github.com/volks73/cargo-wix) is a cargo subcommand for building Windows installers using the WiX toolset.
+Rust tooling tends to be nice in surprising ways, and Windows installers are no exception. [`cargo-wix`](https://github.com/volks73/cargo-wix) is a cargo subcommand for building Windows installers using the WiX toolset.
 
 The install is rather simple:
 
