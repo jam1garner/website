@@ -90,7 +90,7 @@ bl {
     }
 }
 
-@media only screen and (orientation: portrait) and (min-height: 11in) {
+/*@media only screen and (orientation: portrait) and (min-height: 11in) {
     article p {
         font-size: 5vw;
     }
@@ -110,7 +110,7 @@ bl {
     article h1 {
         margin-top: 0px;
     }
-}
+}*/
 
 @media only screen and (orientation: portrait) {
     article {
