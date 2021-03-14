@@ -68,6 +68,8 @@ And after all, why do something by hand when the compiler can do it for you?
 
 <script src="https://gist.github.com/jam1garner/ebd32ffb3aa78cbcfed1da1aff7eb95f.js"></script>
 
+([Playground Link](https://play.rust-lang.org/?version=stable&mode=release&edition=2018&gist=0ab3fc4aeb6e6fdc622494688975b78a))
+
 To start off: if you already see where this is going, you may be entitled to financial compensation.
 
 Now, what's going on here? Well, our goal is to ensure the incorrect branch is never compiled into the final executable. A fun way to check that is to cause a linker error whenever the bad branch is compiled into the binary by just... trying to call a non-existant function. So if we move it to the opposite branch (i.e. the only one of the two we expect to get compiled in) we get a fun error like this:
