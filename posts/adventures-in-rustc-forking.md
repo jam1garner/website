@@ -11,7 +11,7 @@ Quick introduction for anyone who isn't familiar: [Skyline] is a framework for d
 [cargo skyline]: https://github.com/jam1garner/cargo-skyline
 [rust-std-skyline]: https://github.com/jam1garner/rust-std-skyline
 
-A while back I made a blog post [on using Rust for Modding Smash Ultimate]. Since then, there are even more people using skyline-rs for mods for a variety of games. Even Skyline itself has started using Rust internally. One part of my previous post about using Rust for game modding that didn't quite make the final cut was a section discussing [xargo], a (deprecated) utility for cross compiling Rust with a modify copy of the Rust standard library.
+A while back I made a blog post [on using Rust for Modding Smash Ultimate]. Since then, there are even more people using skyline-rs for mods for a variety of games. Even Skyline itself has started using Rust internally. One part of my previous post about using Rust for game modding that didn't quite make the final cut was a section discussing [xargo], a (deprecated) utility for cross compiling Rust with a modified copy of the Rust standard library.
 
 [on using Rust for Modding Smash Ultimate]: https://jam1.re/blog/rust-for-game-modding
 [xargo]: https://github.com/japaric/xargo
