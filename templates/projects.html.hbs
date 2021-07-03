@@ -14,6 +14,21 @@
         <meta property="og:site_name" content="jam1garner" />
         <meta property="og:description"content="All the things I've made over the past couple years">
     {{/if}}
+    <!-- Matomo -->
+    <script type="text/javascript">
+      var _paq = window._paq = window._paq || [];
+      /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+        var u="//stats.jam1.re/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '1']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.type='text/javascript'; g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+      })();
+    </script>
+    <!-- End Matomo Code -->
 </head>
 <body>
     {{> sticky}}
@@ -25,11 +40,22 @@
                 <div class="text">
                     {{#each projects}}
                         <div class="individual">
-                            <a class="github" href="{{github}}">
-                                <h2>{{name}}</h2>
-                                <img src="/img/github_light.png" alt="Github">
-                            </a>
-                            <p>{{description}}</p>
+                            {{#if github}}
+                                <a class="github" href="{{github}}">
+                                    <h2>{{name}}</h2>
+                                    <img src="/img/github_light.png" alt="Github">
+                                </a>
+                            {{else}}
+                                {{#if youtube}}
+                                    <a class="github" href="{{youtube}}">
+                                        <h2>{{name}}</h2>
+                                        <img src="/img/yt_icon_mono_dark.png" alt="Youtube">
+                                    </a>
+                                {{else}}
+                                    <h2>{{name}}</h2>
+                                {{/if}}
+                            {{/if}}
+                            <p>{{{description}}}</p>
                         </div>
                     {{/each}}
                 </div>

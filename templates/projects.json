@@ -1,5 +1,262 @@
 { "projects" : [
     {
+        "projects": [
+            {
+                "name": "Smash Minecraft Skins",
+                "date": "",
+                "github": "https://github.com/jam1garner/smash-minecraft-skins",
+                "description": "A mod for downloading and using your own Minecraft skin to use in-game. Just enter in your username! Includes a custom menu to select a skin, the ability to download a skin from a minecraft username, and on-the-fly file conversion and UI portrait rendering. All written in Rust and running on the Switch itself. This mod released within 24 hours of the release of Steve due to weeks of constant prep work, resulting in <a href=\"https://twitter.com/jam1garner/status/1316504009348386820\">over 1.5 Million views on twitter alone</a>."
+            }
+        ],
+        "image": "https://user-images.githubusercontent.com/8260240/103486246-7238f500-4dca-11eb-846c-96c7ec56ecda.jpg"
+    },
+    {
+        "projects" : [
+            {
+                "name": "RustConf 2020 Talk: Macros for a More Productive Rust",
+                "date": "",
+                "youtube": "https://www.youtube.com/watch?v=dZiWkbnaQe8",
+                "description": "The macro system in Rust is still arguably in its infancy. While a lot of the implementation has already been done, plenty of projects don't properly take advantage of macros due to the limited resources on what macro programming should look like. This talk is aimed at introducing those interested in using macros in existing or future projects to macro idioms often needed in order to take projects to the next level."
+            }
+        ],
+        "image": "https://cdn.discordapp.com/attachments/376971848555954187/860368522994647080/unknown.png"
+    },
+    {
+        "projects" : [
+            {
+                "name": "skyline-rs",
+                "date": "",
+                "github": "https://github.com/ultimate-research/skyline-rs",
+                "description": "A Rust library for modding Nintendo Switch games using Skyline"
+            },
+            {
+                "name": "cargo-skyline",
+                "date": "",
+                "github": "https://github.com/ultimate-research/skyline-rs",
+                "description": "A cargo subcommand for creating, building, and installing (over the network) Skyline plugins, enabling users to mod Switch games in high-level Rust."
+            },
+            {
+                "name": "rust-std-skyline",
+                "date": "",
+                "github": "https://github.com/skyline-rs/rust",
+                "description": "A fork of the Rust programming language adding full support for writing Rust code for the Nintendo Switch."
+            }
+        ],
+        "image": "https://cdn.discordapp.com/attachments/349043564237553664/766034054197542952/2020101413242900-0E7DF678130F4F0FA2C88AE72B47AFDF.jpg"
+    },
+    { 
+
+        "projects" : [
+            {
+                "name": "Samsung WB35F Research",
+                "date": "",
+                "github": "https://github.com/jam1garner/wb35f-research",
+                "description": "Research into the Samsung WB35F Emulator with the end goal of developing an exploit for it. Includes firmware downloader/extractor, research notes, and a rudimentary emulator written in python with unicorn for dynamic analysis of the Zoran COACH firmware kernel."
+            }
+        ],
+        "image": "https://pbs.twimg.com/media/Dx7uRQ-VAAAMd2F.jpg",
+        "caption": "WB35F/COACH Emulator in action."
+    },
+    {
+        "projects" : [
+            {
+                "name": "Rust Contributions",
+                "date": "",
+                "description": "<ul><li>Added the migration lint for Rust 2021's prelude changes (<a href=\"https://github.com/rust-lang/rust/pull/85707\">#85707</a>)</li><li>Follow-up PR to fix the above lint (<a href=\"https://github.com/rust-lang/rust/pull/86657\">#86657</a>)</li><li>Fix a bug preventing cross compilation while bootstrapping Rust (<a href=\"https://github.com/rust-lang/rust/pull/85590\">#85590</a>)</li></ul>"
+            }
+        ],
+        "image": "https://cdn.discordapp.com/attachments/376971848555954187/860351101400383498/unknown.png",
+        "caption": "The lint I wrote for the Rust 2021 Edition Migration"
+    },
+    {
+        "projects" : [
+            {
+                "name": "binread",
+                "date": "",
+                "github": "https://github.com/jam1garner/binread",
+                "description": "A Rust crate for helping parse structs from binary data using ✨macro magic✨"
+            },
+            {
+                "name": "binwrite",
+                "date": "",
+                "github": "https://github.com/jam1garner/binwrite",
+                "description": "A Rust crate for helping write structs as binary data using ✨macro magic✨"
+            }
+        ],
+        "image": "/img/binread.png"
+    },
+    {
+        "projects": [
+            {
+                "name": "smash-arc",
+                "date": "",
+                "github": "https://github.com/jam1garner/smash-arc",
+                "description": "A Rust library for working with Smash Ultimate's archive format, supporting both its in-game memory representation and its on-disk representation, as well as even supporting parsing it over a network connection. This is one of the core components of many Smash Ultimate tools including, but not limited to: Arcropolis and ArcExplorer."
+            },
+            {
+                "name": "ArcExplorer",
+                "date": "",
+                "github": "https://github.com/ScanMountGoat/ArcExplorer",
+                "description": "A cross-platform file browser and extractor for Smash Ultimate's data.arc file, even allowing asynchronous loading of the rougly 16 GB file over the network from your Switch in a manner that feels like it's stored locally."
+            },
+            {
+                "name": "arc-network",
+                "date": "",
+                "github": "https://github.com/jam1garner/arc-network",
+                "description": "A Skyline plugin for providing access to Smash Ultimate's data.arc file over the network"
+            },
+            {
+                "name": "arc-fuse",
+                "date": "",
+                "github": "https://github.com/jam1garner/arc-fuse",
+                "description": "A FUSE filesystem for mounting Smash Ultimate's data.arc file"
+            }
+        ],
+        "image": "https://raw.githubusercontent.com/ScanMountGoat/ArcExplorer/master/application.jpg"
+    },
+    {
+        "projects" : [
+            {
+                "name": "ROBChain",
+                "date": "",
+                "github": "https://www.github.com/jam1garner/ROBChain",
+                "description": "Very Stable Proof of Concept Exploit for the MotionScript Virtual Machine in Smash for Wii U allowing for the loading of arbitrary ROP payloads of any size in a consistent and convenient manner."
+            }
+        ],
+        "embed": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube-nocookie.com/embed/u3qKsbGPgn0\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+        "caption": "Proof of Concept being used to display an arbitrary message."
+    },
+    {
+        "projects": [
+            {
+                "name": "owo-colors",
+                "date": "",
+                "github": "https://github.com/jam1garner/owo-colors",
+                "description": "A zero-allocation no_std-compatible zero-cost way to add color to your Rust terminal, currently garnering roughly a half a million downloads"
+            },
+            {
+                "name": "aarch64-decode",
+                "date": "",
+                "github": "https://github.com/jam1garner/aarch64-decode",
+                "description": "A pure-Rust AArch64 decoder generated from the ARM specification"
+            }
+        ],
+        "embed": "<img src=\"/img/rust_owo.svg\" height=\"300em\" style=\"filter: invert(1);\">"
+    },
+    {
+        "projects": [
+            {
+                "name": "gc-adapter",
+                "date": "",
+                "github": "https://github.com/jam1garner/gc-adapter",
+                "description": "A Rust library for working with the Nintendo Gamecube Controller Adapter"
+            },
+            {
+                "name": "gc-gcm",
+                "date": "",
+                "github": "https://github.com/jam1garner/gc-gcm",
+                "description": "A Rust library and CLI for working with GCM/ISO files (raw bit-for-bit disk images) for the Nintendo GameCube"
+            }
+        ],
+        "image": "https://cdn.discordapp.com/attachments/376971848555954187/860391073439547432/may4a_grande.png"
+    },
+    {
+        "projects" : [
+            {
+                "name": "Smash Disc4d",
+                "date": "",
+                "github": "https://github.com/jam1garner/smash-disc4d",
+                "description": "A client for interfacing with a Wii U gecko server written in C# in order to add Discord Rich Presence to Smash 4, allowing you to show off what mode, stage, and characters you are playing with."
+            },
+            {
+                "name": "smush-discord",
+                "date": "",
+                "github": "https://github.com/jam1garner/smush-discord",
+                "description": "A client for the smush_info Skyline plugin to provide real-time Discord Rich Presence for Smash Ultimate"
+            }
+        ],
+        "image": "https://cdn-images-1.medium.com/max/1600/1*ThRb74nQYMXEYmjGiiD9Qg.png"
+    },
+    {
+        "projects": [
+            {
+                "name": "DefCon CTF 2020 Finals Participation",
+                "date": "",
+                "description": "Played for the RPISEC team on the `pinboooll` challenge (among others), helping to score points"
+            }
+        ],
+        "image": "https://oooverflow.io/dc-ctf-2020-finals/whole-game-AFL-2020.png"
+    },
+    {
+        "projects": [
+            {
+                "name": "smash-sli",
+                "date": "",
+                "github": "https://github.com/jam1garner/smash-sli",
+                "description": "A Rust library for working with soundlabelinfo.sli files from Smash Ultimate."
+            },
+            {
+                "name": "smash-fnv",
+                "date": "",
+                "github": "https://github.com/jam1garner/smash-fnv",
+                "description": " A library/CLI for working with sound_volume_fighter_num_table.fnv files in Smash Ultimate "
+            },
+            {
+                "name": "smash-csb",
+                "date": "",
+                "github": "https://github.com/jam1garner/smash-csb",
+                "description": "A library/tool for working with Smash Ultimate's commonsoundtable.csb files "
+            },
+            {
+                "name": "smash-svt",
+                "date": "",
+                "github": "https://github.com/jam1garner/smash-svt",
+                "description": "Rust library and CLI for working with Smash Ultimate's sound volume table"
+            }
+        ],
+        "image": "https://cdn.discordapp.com/attachments/447823426485354496/860387170930262046/unknown.png"
+    },
+    {
+        "projects": [
+            {
+                "name": "nutexb",
+                "date": "",
+                "github": "https://github.com/jam1garner/nutexb",
+                "description": "A Rust library for working with Namco's NU engine textures"
+            },
+            {
+                "name": "img2nutexb",
+                "date": "",
+                "github": "https://github.com/jam1garner/img2nutexb",
+                "description": "A command line tool for converting to Namco/Smash Ultimate texture files"
+            },
+            {
+                "name": "bntx",
+                "date": "",
+                "github": "https://github.com/jam1garner/bntx",
+                "description": "A Rust library for working with Nintendo textures"
+            },
+            {
+                "name": "img2bntx",
+                "date": "",
+                "github": "https://github.com/jam1garner/img2bntx",
+                "description": "A command line tool for converting to Nintendo texture files"
+            }
+        ],
+        "image": "https://cdn.discordapp.com/attachments/516433603031334915/848408922742063154/unknown.png"
+    },
+    {
+        "projects": [
+            {
+                "name": "discord-forge",
+                "date": "",
+                "github": "https://github.com/jam1garner/discord-forge",
+                "description": "A Discord bot for converting Smash Ultimate's, Smash for Wii U's, and various Switch Games' filetypes."
+            }
+        ],
+        "image": "https://cdn.discordapp.com/attachments/376971848555954187/860399691522244648/unknown.png"
+    },
+    {
         "projects" : [
             {
                 "name": "mscdec",
@@ -26,27 +283,47 @@
     {
         "projects" : [
             {
-                "name": "ROBChain",
+                "name": "some-error",
                 "date": "",
-                "github": "https://www.github.com/jam1garner/ROBChain",
-                "description": "Very Stable Proof of Concept Exploit for the MotionScript Virtual Machine in Smash for Wii U allowing for the loading of arbitrary ROP payloads of any size in a consistent and convenient manner."
-            }
-        ],
-        "embed": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube-nocookie.com/embed/u3qKsbGPgn0\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
-        "caption": "Proof of Concept being used to display an arbitrary message."
-    },
-    { 
-
-        "projects" : [
+                "github": "https://github.com/jam1garner/some-error",
+                "description": "A library for creating and using anonymous sum types as errors in Rust"
+            },
             {
-                "name": "Samsung WB35F Research",
+                "name": "cpp-inherit",
                 "date": "",
-                "github": "https://github.com/jam1garner/wb35f-research",
-                "description": "Research into the Samsung WB35F Emulator with the end goal of developing an exploit for it. Includes firmware downloader/extractor, research notes, and a rudimentary emulator written in python with unicorn for dynamic analysis of the Zoran COACH firmware kernel."
+                "github": "https://github.com/jam1garner/cpp-inherit",
+                "description": "A macro for inheriting Rust structures from C++ classes. Featured in my RustConf 2020 talk."
+            },
+            {
+                "name": "rust-dyn-call",
+                "date": "",
+                "github": "https://github.com/jam1garner/rust-dyn-call",
+                "description": "Do not use. Do not use. Do not use. (Calls a function dynamically)"
+            },
+            {
+                "name": "include-self",
+                "date": "",
+                "github": "https://github.com/jam1garner/include-self",
+                "description": "A bad crate for including the file being called."
             }
         ],
-        "image": "https://pbs.twimg.com/media/Dx7uRQ-VAAAMd2F.jpg",
-        "caption": "WB35F/COACH Emulator in action."
+        "image": "https://cdn.discordapp.com/attachments/376971848555954187/860362550214656000/unknown.png"
+    },
+    {
+        "projects": [
+            {
+                "name": "nso-param-search",
+                "date": "",
+                "github": "https://github.com/jam1garner/nso-param-search",
+                "description": "A tool for searching for param hashes in Smash Ultimate NSO binaries"
+            },
+            {
+                "name": "stage-table-refs",
+                "date": "",
+                "github": "https://github.com/jam1garner/stage-table-refs",
+                "description": "Find references to Smash Ultimate's stage table in order to perform a relocated and expand patch"
+            }
+        ]
     },
     {
         "projects" : [
@@ -57,7 +334,8 @@
                 "description": "A vim-inspired hex editor for the terminal written in Rust."
             }
         ],
-        "image": "https://pbs.twimg.com/media/Dy1N6y1WsAEeNih.jpg"
+        "image": "https://pbs.twimg.com/media/Dy1N6y1WsAEeNih.jpg",
+        "caption": ""
     },
     {
         "projects" : [
@@ -82,15 +360,60 @@
         "embed": "<blockquote class=\"twitter-tweet\" data-lang=\"en\"><p lang=\"tl\" dir=\"ltr\">DK Bongo typing in action. <a href=\"https://t.co/0wxlE4Abuw\">pic.twitter.com/0wxlE4Abuw</a></p>&mdash; jam1garner (@jam1garner) <a href=\"https://twitter.com/jam1garner/status/973667327861456897?ref_src=twsrc%5Etfw\">March 13, 2018</a></blockquote><script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>"
     },
     {
-        "projects" : [
+        "projects": [
             {
-                "name": "Smash Disc4d",
+                "name": "bgm-property-generator",
                 "date": "",
-                "github": "https://github.com/jam1garner/smash-disc4d",
-                "description": "A client for interfacing with a Wii U gecko server written in C# in order to add Discord Rich Presence to Smash 4, allowing you to show off what mode, stage, and characters you are playing with."
+                "github": "https://github.com/jam1garner/bgm-property-generator",
+                "description": "A tool for auto-regenerating a bgm_property.bin file on the fly by parsing Smash's archive format, Music format, and Music metadata formats, then generating the file as the base game's was."
+            },
+            {
+                "name": "libnus3audio",
+                "date": "",
+                "github": "https://github.com/jam1garner/libnus3audio",
+                "description": "A Rust library for working with Namco NU Sound's audio archive files"
+            },
+            {
+                "name": "nus3audio-rs",
+                "date": "",
+                "github": "https://github.com/jam1garner/nus3audio-rs",
+                "description": "A Rust program for working with Namco NU Sound's audio archive files"
+            },
+            {
+                "name": "replace_music",
+                "date": "",
+                "github": "https://github.com/jam1garner/replace_music",
+                "description": "A Skyline plugin for replacing stream files (music, videos) with files of arbitrary size"
             }
-        ],
-        "image": "https://cdn-images-1.medium.com/max/1600/1*ThRb74nQYMXEYmjGiiD9Qg.png"
+        ]
+    },
+    {
+        "projects": [
+            {
+                "name": "battery-notification",
+                "date": "",
+                "github": "https://github.com/jam1garner/battery-notification",
+                "description": "A hard-to-ignore low battery notification daemon written in Rust"
+            },
+            {
+                "name": "lzarc",
+                "date": "",
+                "github": "https://github.com/jam1garner/lzarc",
+                "description": "A Rust library and CLI for working with Paper Mario Color Splash archives"
+            },
+            {
+                "name": "sarc",
+                "date": "",
+                "github": "https://github.com/jam1garner/sarc",
+                "description": "A simple to use library and CLI for reading/writing SARC and SZS (yaz0 compressed SARCs) in Rust"
+            },
+            {
+                "name": "nxo-parser",
+                "date": "",
+                "github": "https://github.com/jam1garner/nxo-parser",
+                "description": "Rust parsers for Nintendo Switch executable formats"
+            }
+        ]
     },
     {
         "projects" : [
@@ -106,9 +429,9 @@
     {
         "projects" : [
             {
-                "name": "Blog",
+                "name": "Website",
                 "date": "",
-                "github": "https://github.com/jam1garner/blog",
+                "github": "https://github.com/jam1garner/website",
                 "description": "My website/blog utilizes a Rust backend, a Handlebars templating system and uses Markdown for the posts themselves. Styling/Templates are handmade and the site is entirely javascript-less."
             }
         ],
