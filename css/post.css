@@ -33,3 +33,11 @@ pre {
 article a {
     text-decoration: underline;
 }
+
+blockquote p {
+    color: var(--text-muted) !important;
+}
+
+table {
+    padding-left: 20%;
+}
