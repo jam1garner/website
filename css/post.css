@@ -35,7 +35,7 @@ article a {
 }
 
 blockquote p {
-    color: var(--text-muted) !important;
+    color: lightslategray !important;
 }
 
 table {
