@@ -126,7 +126,7 @@ then our program works as expected. So it's not *hard* for our users to work aro
 
 #### Issue #2: Output
 
-To illustrate the other issue, let's make our own more-readable version of ANSI escape seuqneces that uses an XML syntax. It'll look something like this:
+To illustrate the other issue, let's make our own more-readable version of ANSI escape sequences that uses an XML syntax. It'll look something like this:
 
 <script src="https://gist.github.com/jam1garner/0e0b4e819d572eaebba4d7b606988a63.js"></script>
 
