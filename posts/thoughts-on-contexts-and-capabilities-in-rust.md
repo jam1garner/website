@@ -6,6 +6,8 @@ Earlier today I read through Tyler Mandry's [Context and Capabilities in Rust](h
 
 So here's an exploration of my thoughts so far.
 
+![](/img/allow_std_threads.png)
+
 ### Temporal Trait Implementation
 
 One concept Tyler explored throughout the post was the idea of traits which are implemented only for a given lifetime. But this raises a question: how do we constrain these lifetimes when specifying implementation?
