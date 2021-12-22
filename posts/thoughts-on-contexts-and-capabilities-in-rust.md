@@ -351,6 +351,9 @@ There's a lot of little bits and details that need ironing out (trait objects, f
 
 But I'm excited to see if anything comes of this. I really think it elegantly strings a lot of my problems with the language into a single issue and then solves it.
 
+---
+
+Thanks to ejr, Raytwo, and David Golembiowski for reviewing this blog post before release <3
 
 [^1]: Since the [variance of the lifetime](https://doc.rust-lang.org/nomicon/subtyping.html) with respect to our generic parameter `T` is covariant, we can ensure the context is lively due to the fact that the context must exist for `T` up until the last function call in which the context variable is marked as a requirement of
 [^2]: "[What Color is Your Function?](https://journal.stuffwithstuff.com/2015/02/01/what-color-is-your-function/)", "[Why async Rust doesn't work](https://eta.st/2021/03/08/async-rust-2.html)", [Rust's Async isn't fucking colored](https://www.hobofan.com/blog/2021-03-10-rust-async-colored/), "[Rust async is colored, and that's not a big deal](https://morestina.net/blog/1686/rust-async-is-colored)"
