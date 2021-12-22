@@ -25,7 +25,8 @@ pre code {
 
 pre {
     overflow-x: scroll;
-    padding: 20px;
+    /*padding: 20px;*/
+    margin: 30px;
     white-space: pre-wrap;
     background: rgba(124, 124, 124, 25%);
 }
@@ -40,4 +41,12 @@ blockquote p {
 
 table {
     padding-left: 20%;
+}
+
+pre {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+pre::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
 }

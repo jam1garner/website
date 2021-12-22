@@ -8,9 +8,13 @@ use std::path::Path;
 fn post_to_html<P: AsRef<Path>>(path: P) -> String {
     let contents = fs::read_to_string(path).expect("Unable to read from file");
     let mut options = ComrakOptions::default();
-    options.unsafe_ = true;
-    options.ext_strikethrough = true;
-    options.ext_table = true;
+    options.extension.autolink = true;
+    options.extension.tagfilter = false;
+    options.extension.strikethrough = true;
+    options.extension.table = true;
+    options.extension.footnotes = true;
+    options.render.unsafe_ = true;
+    options.render.github_pre_lang = true;
     markdown_to_html(&contents[..], &options)
 }
 

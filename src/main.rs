@@ -12,6 +12,7 @@ mod project_data;
 mod feed;
 mod compiler;
 mod nus3audio_converter;
+mod param_explorer;
 
 use rocket::response::{content, Redirect, Stream, NamedFile};
 use rocket::data::Data;

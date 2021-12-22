@@ -8,6 +8,20 @@
     <link rel="stylesheet" href="/css/sticky_sidebar.css" media="all">
     <link rel="stylesheet" href="/css/post.css" media="all">
     <link rel="stylesheet" href="/css/global.css" media="all">
+
+    <!-- Syntax highlighting -->
+    <link rel="stylesheet" href="/css/syntax.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+    <!--<script>hljs.highlightAll();</script>-->
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.querySelectorAll('pre[lang="rust"] > code').forEach((el) => {
+               el.classList.add("language-rust");
+            });
+
+            hljs.highlightAll();
+        });
+    </script>
     {{#if post}}
         <meta property="og:title" content="{{post.title}}" />
         <meta property="og:type" content="website" />
